@@ -1,0 +1,25 @@
+migrations/001_create_grab_receipts.sql
+  c9f948ad9279111c 1-30
+migrations/002_create_views.sql
+  c9f948ad9279111c 1-77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.25",
+  "base_commit_sha": "9e217324ddd09c8987ec1bf9c785dd2f99a3680c",
+  "prompts": {
+    "c9f948ad9279111c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7a981c7c-83ad-4fe6-a28a-caf8c7f487c2",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Michael Tan <tan.michael@mac.com>",
+      "messages": [],
+      "total_additions": 108,
+      "total_deletions": 1,
+      "accepted_lines": 107,
+      "overriden_lines": 0
+    }
+  }
+}
