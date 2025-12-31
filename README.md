@@ -16,7 +16,7 @@ Requires Python 3.11+ and [Poetry](https://python-poetry.org/).
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/grab-receipts-exporter.git
+git clone https://github.com/michaeltansg/grab-receipts-exporter.git
 cd grab-receipts-exporter
 
 # Install dependencies
@@ -75,6 +75,30 @@ poetry run grab-export --mailbox "INBOX/Grab" --csv-path data/receipts.csv --sta
 
 **GrabTip:**
 - `driver_name`, `payment_method`
+
+## PostgreSQL Import (Optional)
+
+SQL migrations are provided to import CSV data into PostgreSQL:
+
+```bash
+# Create table
+psql -d your_database -f migrations/001_create_grab_receipts.sql
+
+# Create views
+psql -d your_database -f migrations/002_create_views.sql
+
+# Import CSV
+\copy grab_receipts(uid, date, type, order_id, currency, total_amount, metadata) FROM 'data/grab_receipts.csv' WITH CSV HEADER;
+```
+
+### Views
+
+| View | Description |
+|------|-------------|
+| `v_grab_food` | Flattened GrabFood receipts with restaurant, items, fees |
+| `v_grab_transport` | Flattened GrabTransport with pickup/dropoff, distance, fare |
+| `v_grab_tip` | Flattened GrabTip with driver name |
+| `v_grab_summary` | Statistics by service type (count, total spent, date range) |
 
 ## Development
 
