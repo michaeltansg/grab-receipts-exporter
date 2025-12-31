@@ -1,0 +1,25 @@
+[project]
+name = "grab-receipts-exporter"
+version = "0.1.0"
+description = "Export Grab receipts from iCloud Mail to CSV"
+authors = [
+    {name = "Michael Tan",email = "tan.michael@mac.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv>=1.0.0",
+]
+
+[tool.poetry]
+packages = [{include = "grab_receipts_exporter", from = "src"}]
+
+[tool.poetry.scripts]
+grab-export = "grab_receipts_exporter.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
