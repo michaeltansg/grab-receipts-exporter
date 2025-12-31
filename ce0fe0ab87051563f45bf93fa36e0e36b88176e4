@@ -1,0 +1,23 @@
+README.md
+  c9f948ad9279111c 19,79-102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.25",
+  "base_commit_sha": "ce0fe0ab87051563f45bf93fa36e0e36b88176e4",
+  "prompts": {
+    "c9f948ad9279111c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7a981c7c-83ad-4fe6-a28a-caf8c7f487c2",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Michael Tan <tan.michael@mac.com>",
+      "messages": [],
+      "total_additions": 25,
+      "total_deletions": 1,
+      "accepted_lines": 25,
+      "overriden_lines": 0
+    }
+  }
+}
